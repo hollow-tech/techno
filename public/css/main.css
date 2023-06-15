@@ -19,8 +19,8 @@
 }
 
 .slide {
-    width: 900px;
-    height: 395px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,9 +32,10 @@
 } */
 
 .slider__image {
-    width: 900px;
-    height: 395px;
+    width: 100%;
+    height: 100%;
 }
+
 .slide.active {
     display: block;
 }
@@ -132,7 +133,7 @@
     border-radius: 8px;
     background-color: #fff;
     padding: 10px;
-    width: 280px;
+    flex: 0 1 19%;
 }
 
 .product__discount {
@@ -253,6 +254,7 @@
 }
 
 .main-categories__products {
+    width: 100%;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -296,7 +298,82 @@
 }
 /* ./about-us */
 
+@media (max-width: 1210px) {
+    .aside-slider {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .product {
+        flex: 0 1 32%;
+    }
+    .slider {
+        width: 750px;
+    }
+}
+@media (max-width: 900px) {
+    .product {
+        max-width: 230px;
+    }
+
+    .slider {
+        width: 700px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 0 1 33%;
+    }
+    .slider {
+        width: 700px;
+        height: 250px;
+    }
+
+    .categories-btns a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 610px) {
+    .product {
+        flex: 0 1 25%;
+    }
+    .slider {
+        width: 450px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 512px) {
+    .product {
+        flex: 0 1 48%;
+    }
+
+    .slider {
+        width: 410px;
+        height: 180px;
+    }
+    .main {
+        padding: 15px 0;
+    }
+}
+
 @media (max-width: 425px) {
+    .main {
+        padding: 15px 0;
+    }
+
+    .product {
+        flex: 0 1 48%;
+    }
+
+    .categories-btns {
+        padding: 10px 0;
+    }
+
     .slider {
         max-width: 380px;
     }
@@ -304,10 +381,6 @@
     .main-sliders {
         display: flex;
         flex-direction: column;
-    }
-
-    .slider__image {
-        max-width: 380px;
     }
 
     .sliders__aside {
@@ -319,11 +392,7 @@
     }
 
     .main-categories__product {
-        width: 50%;
-    }
-
-    .product {
-        width: 180px;
+        width: 100%;
     }
 
     .about-us {
@@ -339,5 +408,25 @@
     .about-us__intro {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .slider {
+        width: 350px;
+        height: 160px;
+    }
+
+    .main-categories__products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product {
+        max-width: 350px;
     }
 }

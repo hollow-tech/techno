@@ -190,6 +190,43 @@
 
 /* ./footer */
 
+@media (max-width: 1024px) {
+    .footer__inner {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer__form {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer__form {
+        display: flex;
+    }
+
+    .footer__copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .copyright-footer__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copyright-footer__notification {
+        border: none;
+        padding: 0;
+    }
+
+    .copyright-footer__privacy {
+        border: none;
+        padding: 0;
+    }
+}
+
 @media (max-width: 425px) {
     .footer__inner {
         flex-wrap: wrap;
